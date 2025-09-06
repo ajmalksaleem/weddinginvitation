@@ -16,15 +16,16 @@ export default function Groom() {
       <div className="absolute inset-0 bg-black/70" />
 
       {/* heading */}
-      <h1
-        className="relative z-10 text-2xl sm:text-2xl text-center mt-6 tracking-wide"
-       
-      >
-        About Him
-      </h1>
+     <h1
+  className="relative z-10 text-3xl sm:text-2xl text-center mt-4 tracking-wide"
+  style={{ fontFamily: "'Kaushan Script', cursive" }}
+>
+  About Him
+</h1>
+
 
       {/* content grid */}
-      <div className="relative z-10 grid md:grid-cols-2 gap-2 items-center max-w-6xl w-full mt-10">
+      <div className="relative z-10 grid md:grid-cols-2 gap-2 items-center max-w-6xl w-full mt-6">
         {/* tuxedo image (center on mobile, left on desktop) */}
         <div className="flex justify-center md:justify-end">
           <img

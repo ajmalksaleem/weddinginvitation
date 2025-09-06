@@ -8,6 +8,8 @@ import "@fontsource/dancing-script/700.css"; // for bold
 import "@fontsource/museomoderno/400.css";
 import "@fontsource/museomoderno/700.css";
 
+import "@fontsource/kaushan-script"; 
+
 
 
 
