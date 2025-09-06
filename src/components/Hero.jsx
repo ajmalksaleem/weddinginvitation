@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import bg from "../assets/herobg.png";
 import redHeart from "../assets/redhart.png";
+import { RiArrowDownDoubleFill } from "react-icons/ri";
 
 export default function Hero() {
   const [timeLeft, setTimeLeft] = useState({});
@@ -47,7 +48,9 @@ export default function Hero() {
 
       {/* content */}
       <div className="relative px-6 text-white">
-        <p className="text-sm tracking-widest text-gray-300">You’re Invited for</p>
+        <p className="text-sm tracking-widest text-gray-300">
+          You’re Invited for
+        </p>
 
         <h1
           className="mt-3 text-4xl sm:text-6xl font-bold"
@@ -91,13 +94,12 @@ export default function Hero() {
             </div>
           </div>
         </div>
-     <div className="mt-10 inline-block rounded-full border border-white/40 p-2 animate-bounce">
-          <span className="block h-2 w-2 rounded-full bg-white/80" />
-        </div>
+      </div>
+
+      {/* Scroll Down Arrow */}
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+        <RiArrowDownDoubleFill size={36} />
       </div>
     </section>
   );
 }
-
-
-
