@@ -5,7 +5,7 @@ import tuxedoBg from "../assets/groombg.png";  // background image
 export default function Groom() {
   return (
     <section
-      className="relative min-h-screen flex flex-col items-center justify-start text-white px-6 py-8"
+      className="relative min-h-[60vh] flex flex-col items-center justify-start text-white px-6 py-8"
       style={{
         backgroundImage: `url(${tuxedoBg})`,
         backgroundSize: "cover",
