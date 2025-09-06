@@ -32,7 +32,7 @@ export default function Nikkah() {
         <p className="text-lg">
           <span className="font-bold text-xl">Venue:</span>
           <br />
-          Alphia nod choichitt vekkam
+          St. Mary&apos;s Parish Hall, Athirampuzha
         </p>
       </div>
 
@@ -40,7 +40,7 @@ export default function Nikkah() {
       <div className="relative z-10 w-full max-w-3xl mt-8 rounded-2xl overflow-hidden shadow-lg">
         <iframe
           title="Nikkah Venue Map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.123456789!2d76.123456789!3d9.876543210!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07d1a123456789%3A0xabcdef123456789!2sArookutty%20Masjidul%20Huda!5e0!3m2!1sen!2sin!4v0000000000000"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3933.1653793138685!2d76.54042369999999!3d9.666906899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07d49b2612e805%3A0x8d12434175d860cf!2z4LS44LWG4LSo4LWN4LSx4LWNIOC0ruC1h-C0sOC1gOC0uOC1jSDgtKrgtL7gtLDgtL_gtLfgtY0g4LS54LS-4LW-!5e0!3m2!1sml!2sin!4v1757149929431!5m2!1sml!2sin"
           width="100%"
           height="300"
           style={{ border: 0 }}
