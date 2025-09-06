@@ -13,7 +13,7 @@ export default function Groom() {
       }}
     >
       {/* overlay */}
-      <div className="absolute inset-0 bg-black/70" />
+      <div className="absolute inset-0 bg-blue-900/70" />
 
       {/* heading */}
      <h1
