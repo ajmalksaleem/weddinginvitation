@@ -1,37 +1,36 @@
 import React from "react";
-import tuxedoIcon from "../assets/tuxedo.png"; // your tuxedo PNG
-import tuxedoBg from "../assets/groombg.png";  // background image
+import groomImg from "../assets/groom.png";   // the PNG you uploaded
+import groomBg from "../assets/groombg.png"; // background image (can change later)
 
 export default function Groom() {
   return (
     <section
-      className="relative min-h-[60vh] flex flex-col items-center justify-start text-white px-6 py-8"
+      className="relative min-h-[60vh] md:min-h-screen flex flex-col items-center justify-start text-white px-6 py-8"
       style={{
-        backgroundImage: `url(${tuxedoBg})`,
+        backgroundImage: `url(${groomBg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
       {/* overlay */}
-      <div className="absolute inset-0 bg-black/70" />
+      <div className="absolute inset-0 bg-black/80" />
 
       {/* heading */}
-     <h1
-  className="relative z-10 text-3xl sm:text-2xl text-center mt-4 tracking-wide"
-  style={{ fontFamily: "'Kaushan Script', cursive" }}
->
-  About Him
-</h1>
-
+      <h1
+        className="relative z-10 text-3xl text-center mt-4 tracking-wide"
+        style={{ fontFamily: "'Kaushan Script', cursive" }}
+      >
+        About Him
+      </h1>
 
       {/* content grid */}
-      <div className="relative z-10 grid md:grid-cols-2 gap-2 items-center max-w-6xl w-full mt-6">
-        {/* tuxedo image (center on mobile, left on desktop) */}
+      <div className="relative z-10 grid md:grid-cols-2 gap-6 items-center max-w-6xl w-full mt-5">
+        {/* groom image (center on mobile, left on desktop) */}
         <div className="flex justify-center md:justify-end">
           <img
-            src={tuxedoIcon}
-            alt="Tuxedo"
-            className="w-32 sm:w-60 invert brightness-0"
+            src={groomImg}
+            alt="Groom"
+            className="w-44 sm:w-60"
           />
         </div>
 
@@ -47,8 +46,8 @@ export default function Groom() {
           <p className="text-gray-200 leading-relaxed">
             <span className="font-bold text-2xl">Grandson of</span>
             <br />
-            Late <b>K.K. Khalid</b> & <b>C.M. Khaeeja</b>, <br />
-            <b>K.M. Abdulkhadar</b> & <b>Aisha</b>
+            <b>K.K. Khalid</b> & <b>C.M. Khadeeja</b>, <br />
+            <b>K.M. Abdulkhader</b> & <b>Aisha</b>
           </p>
 
           <p className="text-gray-200 leading-relaxed">

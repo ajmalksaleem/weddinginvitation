@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import bg from "../assets/herobg.png";
 import redHeart from "../assets/redhart.png";
-import { RiArrowDownDoubleFill } from "react-icons/ri";
 
 export default function Hero() {
   const [timeLeft, setTimeLeft] = useState({});
@@ -15,12 +14,7 @@ export default function Hero() {
 
       if (difference <= 0) {
         clearInterval(interval);
-        setTimeLeft({
-          days: 0,
-          hours: 0,
-          minutes: 0,
-          seconds: 0,
-        });
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       } else {
         setTimeLeft({
           days: Math.floor(difference / (1000 * 60 * 60 * 24)),
@@ -45,6 +39,21 @@ export default function Hero() {
         style={{ backgroundImage: `url(${bg})` }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+
+      {/* shooting stars */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(5)].map((_, i) => (
+          <span
+            key={i}
+            className="shooting-star"
+            style={{
+              top: `${20 + i * 15}%`,
+              left: `${10 + i * 20}%`,
+              animationDelay: `${i * 2}s`,
+            }}
+          />
+        ))}
+      </div>
 
       {/* content */}
       <div className="relative px-6 text-white">
@@ -92,13 +101,12 @@ export default function Hero() {
             </div>
           </div>
         </div>
-     <div className="mt-10 inline-block rounded-full border border-white/40 p-2 animate-bounce">
+
+        {/* scroll indicator */}
+        <div className="mt-10 inline-block rounded-full border border-white/40 p-2 animate-bounce">
           <span className="block h-2 w-2 rounded-full bg-white/80" />
-        </div> 
+        </div>
       </div>
     </section>
   );
 }
-
-
-
