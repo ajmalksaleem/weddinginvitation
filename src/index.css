@@ -24,3 +24,38 @@
     opacity: 0;
   }
 }
+
+
+@keyframes leaf-fall {
+  0%   { transform: translateX(0) translateY(0) rotate(0deg); opacity: 0; }
+  10%  { opacity: 1; }
+  50%  { transform: translateX(-40px) translateY(75vh) rotate(90deg); opacity: 1; }
+  100% { transform: translateX(40px) translateY(150vh) rotate(180deg); opacity: 0; }
+}
+
+.animate-leaf-fall {
+  animation: leaf-fall 12s ease-in-out infinite;
+}
+
+
+
+@keyframes wing-flap {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  50% { transform: rotate(8deg) translateY(-1px); }
+}
+
+@keyframes buzz {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(4px, -3px); }
+  50% { transform: translate(0px, -6px); }
+  75% { transform: translate(-4px, -3px); }
+}
+
+.wing {
+  animation: wing-flap 0.2s infinite ease-in-out;
+  transform-origin: center;
+}
+
+.bee {
+  animation: buzz 2s infinite ease-in-out;
+}
