@@ -91,8 +91,8 @@ export default function Groom() {
 
           <p className="text-black text-sm sm:text-base leading-relaxed italic">
             <span className="font-semibold text-lg">Address</span> <br />
-            Kallarackal House, Naduvath Nagar P.O, <br />
-            Vaduthala, Arookutty, Alappuzha <br /> PIN: 688526
+            Kallarackal House, Naduvath Nagar P O,
+            Vaduthala, Alappuzha <br /> 
           </p>
         </div>
       </div>
@@ -131,8 +131,8 @@ export default function Groom() {
           <p className="text-black text-sm sm:text-base leading-relaxed italic">
             <span className="font-semibold text-xl ">Granddaughter of</span>{" "}
             <br />
-            <b>Hasanar</b> & <b>Khadeeja</b>, <br />
-            <b>Pareed Kunj</b> & <b>Sainaba</b>
+            <b>Late Hasanar Rawther</b> & <b>Late Kadheeja Beevi</b>, <br />
+            <b>Late Pareedkunj P S</b> & <b>Late Sainaba M K</b>
           </p>
 
           <p className="text-black text-sm sm:text-base leading-relaxed italic">
