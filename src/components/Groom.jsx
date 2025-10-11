@@ -23,7 +23,7 @@ export default function Groom() {
 <img
   src={bush}
   alt="Branch Decoration"
-  className="absolute -top-[90px] md:-top-[360px] left-[20%] w-[140%] h-auto z-30 pointer-events-none"
+  className="absolute -top-[90px] md:-top-[300px] md:left-[50%] left-[20%] w-[140%] md:w-[60%] h-auto z-30 pointer-events-none"
     style={{ transform: "rotate(50deg)" }}
 />
 
@@ -80,8 +80,8 @@ export default function Groom() {
 
           <p className="text-black text-sm sm:text-base leading-relaxed italic">
             <span className="font-semibold text-2xl ">Grandson of</span> <br />
-            <b>K.K. Khalid</b> & <b>C.M. Khadeeja</b>, <br />
-            <b>K.M. Abdulkhader</b> & <b>Aisha</b>
+            <b>Late K.K. Khalid</b> & <b>C.M. Khadeeja</b>, <br />
+            <b>Late K.M. Abdulkhader</b> & <b>Aisha</b>
           </p>
 
           <p className="text-black text-sm sm:text-base leading-relaxed italic">
