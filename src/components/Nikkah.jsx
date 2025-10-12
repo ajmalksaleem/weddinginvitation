@@ -2,16 +2,16 @@ import React from "react";
 import hallPng from "../assets/marriageHall.png";
 import sunPng from "../assets/sun.png";
 import cloudPng from "../assets/cloud.png";
-import nightSky from "../assets/nightSky.jpg";
 import moonPng from "../assets/moon.png";
-import starPng from "../assets/star.png";
 import receptionHallPng from "../assets/receptionHall.png";
+import Fireworks from "./Fireworks";
+
 
 export default function Nikkah() {
   return (
     <>
       {/* --- Nikkah Section --- */}
-      <section className="relative min-h-screen flex flex-col items-center justify-start text-white px-6 py-10 bg-gradient-to-b from-sky-600 to-black overflow-hidden">
+      <section className="relative min-h-screen flex flex-col items-center justify-start text-white px-6 py-10 bg-gradient-to-b from-sky-600 to-blackoverflow-hidden">
         {/* Animated Sky Elements */}
         <img
           src={sunPng}
@@ -80,52 +80,29 @@ export default function Nikkah() {
 
       {/* --- Reception Section --- */}
       <section
-        className="relative min-h-screen flex flex-col items-center justify-start text-white px-6 py-16 bg-black overflow-hidden"
-        style={{
-          backgroundImage: `url(${nightSky})`,
-          backgroundSize: "contain",
-          backgroundPosition: "center top",
-          backgroundRepeat: "no-repeat",
-          backgroundAttachment: "fixed",
-        }}
+        className="relative min-h-screen flex flex-col items-center justify-start text-white px-6 py-16 bg-blue-950 overflow-hidden"
       >
-        {/* Dark gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/60 to-black/90"></div>
 
         {/* Animated Moon */}
         <img
           src={moonPng}
           alt="Moon"
-          className="absolute top-20 right-[15%] w-24 sm:w-32 animate-moon-float opacity-95 z-10"
+          className="absolute top-20 right-[15%] w-28 sm:w-32 animate-moon-float opacity-95 z-10"
         />
 
-        {/* Stars */}
-        <div className="absolute inset-0 z-5 overflow-hidden">
-          {Array.from({ length: 25 }).map((_, i) => (
-            <img
-              key={i}
-              src={starPng}
-              alt="Star"
-              className={`absolute w-5 opacity-70 animate-twinkle`}
-              style={{
-                top: `${Math.random() * 90}%`,
-                left: `${Math.random() * 90}%`,
-                animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${2 + Math.random() * 3}s`,
-              }}
-            />
-          ))}
-        </div>
+       
 
-        {/* Shooting Star */}
-        <div className="absolute shooting-star top-[20%] left-[10%]"></div>
+{/* Fireworks Animation */}
+
+<Fireworks />
+
 
         {/* Reception Hall */}
         <div className="relative mt-32 z-10">
           <img
             src={receptionHallPng}
             alt="Reception Hall"
-            className="w-[350px] sm:w-[600px] mx-auto drop-shadow-2xl"
+            className="w-[350px] sm:w-[600px] mx-auto"
           />
         </div>
 
