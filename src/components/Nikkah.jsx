@@ -4,14 +4,13 @@ import sunPng from "../assets/sun.png";
 import cloudPng from "../assets/cloud.png";
 import moonPng from "../assets/moon.png";
 import receptionHallPng from "../assets/receptionHall.png";
-import Fireworks from "./Fireworks";
 
 
 export default function Nikkah() {
   return (
     <>
       {/* --- Nikkah Section --- */}
-      <section className="relative min-h-screen flex flex-col items-center justify-start text-white px-6 py-10 bg-gradient-to-b from-sky-600 to-blackoverflow-hidden">
+      <section className="relative min-h-screen flex flex-col items-center justify-start text-white px-6 py-10 bg-gradient-to-b from-sky-600 to-blue-950 overflow-hidden">
         {/* Animated Sky Elements */}
         <img
           src={sunPng}
@@ -91,10 +90,6 @@ export default function Nikkah() {
         />
 
        
-
-{/* Fireworks Animation */}
-
-<Fireworks />
 
 
         {/* Reception Hall */}
