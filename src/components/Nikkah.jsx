@@ -79,56 +79,72 @@ export default function Nikkah() {
 
       {/* --- Reception Section --- */}
       <section
-        className="relative min-h-screen flex flex-col items-center justify-start text-white px-6 py-16 bg-blue-950 overflow-hidden"
-      >
+  className="relative min-h-screen flex flex-col items-center justify-start text-white px-6 py-16 bg-blue-950 overflow-hidden"
+>
+  {/* Twinkling Stars */}
+  <div className="absolute top-1 left-0 w-full h-[45%] z-0 overflow-hidden">
+    {Array.from({ length: 40 }).map((_, i) => (
+      <div
+        key={i}
+        className={`absolute rounded-full animate-twinkle`}
+        style={{
+          top: `${Math.random() * 50}%`, // only upper part of screen
+          left: `${Math.random() * 100}%`,
+          width: `${Math.random() * 3 + 1}px`,
+          height: `${Math.random() * 3 + 1}px`,
+          backgroundColor:
+            Math.random() > 0.5 ? "rgba(255,255,255,0.9)" : "rgba(255,235,130,0.9)",
+          animationDelay: `${Math.random() * 2}s`,
+        }}
+      ></div>
+    ))}
+  </div>
 
-        {/* Animated Moon */}
-        <img
-          src={moonPng}
-          alt="Moon"
-          className="absolute top-20 right-[15%] w-28 sm:w-32 animate-moon-float opacity-95 z-10"
-        />
+  {/* Animated Moon */}
+  <img
+    src={moonPng}
+    alt="Moon"
+    className="absolute top-20 right-[15%] w-28 sm:w-32 animate-moon-float opacity-95 z-10"
+  />
 
-       
+  {/* Reception Hall */}
+  <div className="relative mt-32 z-10">
+    <img
+      src={receptionHallPng}
+      alt="Reception Hall"
+      className="w-[350px] sm:w-[600px] mx-auto"
+    />
+  </div>
 
+  {/* Reception Text */}
+  <div className="relative z-10 text-center max-w-2xl mt-10 space-y-6">
+    <h1
+      className="text-4xl sm:text-5xl font-semibold"
+      style={{ fontFamily: "'Kaushan Script', cursive" }}
+    >
+      Wedding Reception
+    </h1>
 
-        {/* Reception Hall */}
-        <div className="relative mt-32 z-10">
-          <img
-            src={receptionHallPng}
-            alt="Reception Hall"
-            className="w-[350px] sm:w-[600px] mx-auto"
-          />
-        </div>
+    <p className="text-lg sm:text-xl leading-relaxed text-gray-200">
+      Join us for a night under the stars, celebrating love, laughter, and
+      togetherness.
+    </p>
 
-        {/* Reception Text */}
-        <div className="relative z-10 text-center max-w-2xl mt-10 space-y-6">
-          <h1
-            className="text-4xl sm:text-5xl font-semibold"
-            style={{ fontFamily: "'Kaushan Script', cursive" }}
-          >
-            Wedding Reception
-          </h1>
+    <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 mt-6">
+      <p className="text-lg">
+        <span className="font-bold text-xl">Date & Time:</span>
+        <br />
+        21st December 2025, From 6:30 PM
+      </p>
+      <p className="text-lg mt-4">
+        <span className="font-bold text-xl">Venue:</span>
+        <br />
+        Naduvathul Islam English medium school ground
+      </p>
+    </div>
+  </div>
+</section>
 
-          <p className="text-lg sm:text-xl leading-relaxed text-gray-200">
-            Join us for a night under the stars, celebrating love, laughter, and
-            togetherness.
-          </p>
-
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 mt-6">
-            <p className="text-lg">
-              <span className="font-bold text-xl">Date & Time:</span>
-              <br />
-              21st December 2025, From 6:30 PM
-            </p>
-            <p className="text-lg mt-4">
-              <span className="font-bold text-xl">Venue:</span>
-              <br />
-              Naduvathul Islam English medium school ground
-            </p>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

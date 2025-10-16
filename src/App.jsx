@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "./components/Hero";
 import Groom from "./components/Groom";
 import Nikkah from "./components/Nikkah";
+import Vows from "./components/Vows";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Hero />
       <Groom/>
       <Nikkah/>
+      <Vows/>
     </div>
   );
 }
