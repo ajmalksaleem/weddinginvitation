@@ -6,7 +6,7 @@ export default function Hero() {
   const [timeLeft, setTimeLeft] = useState({});
 
   useEffect(() => {
-    const targetDate = new Date("2025-12-21T12:30:00").getTime();
+    const targetDate = new Date("2025-12-21T11:15:00").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -110,3 +110,27 @@ export default function Hero() {
     </section>
   );
 }
+
+
+//  $("#submit-form").submit((e)=>{
+//             e.preventDefault()
+//             const submitButton = $("#submitbtn");
+//             submitButton.prop("disabled", true).text("Loading...");
+//             $.ajax({
+//                 url:"https://script.google.com/macros/s/AKfycbwOb4u5h_UzvkSOZumeI2TzmnPmjZNFBq1W-VYjDMFHnhJDB7IZI0Sd7sdA3coL6xIn0g/exec",
+//                 data:$("#submit-form").serialize(),
+//                 method:"post",
+//                 success:function (response){
+//                     alert("Form submitted successfully")
+//                     window.location.reload()
+//                     //window.location.href="https://google.com"
+//                 },
+//                 error:function (err){
+//                     alert("Something Error")
+    
+//                 },
+//                 complete: function() {
+//             submitButton.prop("disabled", false).text("Send Message"); // Re-enable and reset text after submission
+//         }
+//             })
+//         })

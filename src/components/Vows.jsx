@@ -5,18 +5,52 @@ import { CheckCircle } from "lucide-react";
 export default function Wishes() {
   const [form, setForm] = useState({ name: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false)
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (form.name.trim() && form.message.trim()) {
+ const handleSubmit = async (e) => {
+  setLoading(true)
+  e.preventDefault();
+
+  // Optional: prevent resubmission while loading
+  if (!form.name.trim() || !form.message.trim()) {
+    alert("Please fill all fields.");
+    setLoading(false)
+    return;
+  }
+
+  try {
+    const formData = new FormData();
+    formData.append("name", form.name);
+    formData.append("message", form.message);
+
+    const response = await fetch(
+      "https://script.google.com/macros/s/AKfycbxxSg6CGj_bGXD73rbt0nIPCznNYxeC2JC7zIiADhfW62Do8md_FuvJUthCwWStmfATdw/exec",
+      {
+        method: "POST",
+        body: formData
+      }
+    );
+
+    if (response.ok) {
+      console.log("Successfully sent!");
       setSubmitted(true);
       setForm({ name: "", message: "" });
+      setLoading(false)
+    } else {
+      alert("Something went wrong. Please try again.");
+      console.error("Response error:", response.statusText);
+      setLoading(false)
     }
-  };
+  } catch (err) {
+    alert("Network error. Please check your connection.");
+    console.error("Fetch error:", err);
+  }
+};
+
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-950 via-gray-950 to-black text-white px-6 py-20 overflow-hidden">
@@ -84,12 +118,24 @@ export default function Wishes() {
               ></textarea>
             </div>
 
-            <button
-              type="submit"
-              className="w-full py-3 rounded-xl bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold tracking-wider hover:scale-[1.02] hover:shadow-lg transition-all duration-300 flex justify-center gap-2"
-            >
-              Send Wish <SendHorizontal />
-            </button>
+           <button
+  disabled={loading}
+  type="submit"
+  className={`w-full py-3 rounded-xl text-white font-semibold tracking-wider transition-all duration-300 flex justify-center gap-2
+    ${loading
+      ? "bg-gray-400 cursor-not-allowed"
+      : "bg-gradient-to-r from-purple-500 to-blue-500 hover:scale-[1.02] hover:shadow-lg"}
+  `}
+>
+  {loading ? (
+    "Loading..."
+  ) : (
+    <>
+      Send Wish <SendHorizontal />
+    </>
+  )}
+</button>
+
           </>
         ) : (
           <div className="text-center py-12 flex flex-col items-center gap-4">
