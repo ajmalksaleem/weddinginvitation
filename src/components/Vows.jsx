@@ -1,84 +1,125 @@
-import React from "react";
-import heartSvg from "../assets/redhart.png";
-import paperRocket from "../assets/paper-rocket.png";
-import backgroundImg from "../assets/wedding-bg.jpg";
+import React, { useState } from "react";
+import { SendHorizontal } from 'lucide-react';
+import { CheckCircle } from "lucide-react";
 
-export default function Reflections() {
+export default function Wishes() {
+  const [form, setForm] = useState({ name: "", message: "" });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (form.name.trim() && form.message.trim()) {
+      setSubmitted(true);
+      setForm({ name: "", message: "" });
+    }
+  };
+
   return (
-    <section
-      className="relative min-h-screen flex flex-col justify-center items-center px-6 overflow-hidden"
-      style={{
-        backgroundImage: `url(${backgroundImg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-      {/* overlay */}
-      
-      {/* heading */}
-      <h2
-        className="text-3xl md:text-5xl font-bold mb-12 text-center text-white drop-shadow-lg z-20"
-        style={{ fontFamily: "'Great Vibes', cursive" }}
-      >
-        Reflections
-      </h2>
+    <section className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-950 via-gray-950 to-black text-white px-6 py-20 overflow-hidden">
 
-      {/* heart divider */}
-      <img
-  src={heartSvg}
-  className="w-20 mb-10 animate-bounceHeart drop-shadow-lg z-20 filter brightness-0 invert"
-  alt="heart"
-/>
-
-      {/* quotes container */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-6xl z-20">
-        {/* Ajmal */}
-        <div className="relative bg-white/80 backdrop-blur-md border border-amber-200 rounded-3xl p-8 md:p-10 max-w-sm text-center shadow-xl hover:shadow-2xl transition-all duration-500">
-          <p
-            className="text-gray-800 italic leading-relaxed text-lg"
-            style={{ fontFamily: "'Dancing Script', cursive" }}
-          >
-            بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ <br />
-            Marriage is not merely the union of two hearts, but the joining of two families and the completion of one’s faith. For indeed, <span className="text-red-800">“And We created you in pairs” — [Surah An-Naba, 78:8].</span> <br />
-            May this bond be filled with mercy, peace, and divine blessings.
-          </p>
-          <p className="mt-5 text-rose-600 font-semibold text-right text-lg">
-            — Ajmal
-          </p>
-        </div>
-
-        {/* Alphia */}
-        <div className="relative bg-white/80 backdrop-blur-md border border-amber-200 rounded-3xl p-8 md:p-10 max-w-sm text-center shadow-xl hover:shadow-2xl transition-all duration-500">
-          <p
-            className="text-gray-800 italic leading-relaxed text-lg"
-            style={{ fontFamily: "'Dancing Script', cursive" }}
-          >
-            “May our souls intertwine like stars — distant yet eternally shining for each other.”
-          </p>
-          <p className="mt-5 text-rose-600 font-semibold text-right text-lg">
-            — Alphia
-          </p>
-        </div>
+      {/* Subtle background glow */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-pink-500/10 blur-3xl rounded-full"></div>
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-purple-400/10 blur-3xl rounded-full"></div>
       </div>
 
-      {/* rockets moving diagonally in spiral */}
+      {/* Heading */}
+      <h2
+        className="relative z-10 text-4xl md:text-5xl font-light mb-3 tracking-wide text-center"
+        style={{ fontFamily: "'Kaushan Script', cursive" }}
+      >
+        Leave Your Wishes
+      </h2>
 
-      {/* floating animation keyframes */}
-      <style>{`
+      {/* Subtext */}
+      <p
+        className="relative z-10 text-gray-300 text-center mb-12 text-base italic"
+        style={{ fontFamily: "'DM Sans', sans-serif" }}
+      >
+        “May every word shared today shine with warmth and grace”
+      </p>
 
-        @keyframes bounceHeart {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-15%); }
-        }
+      {/* Form */}
+      <form
+        onSubmit={handleSubmit}
+        className="relative z-10 w-full max-w-lg bg-white/5 border border-white/10 rounded-2xl p-10 backdrop-blur-xl shadow-[0_0_40px_rgba(255,255,255,0.05)] transition-all duration-500 hover:shadow-[0_0_60px_rgba(255,255,255,0.1)]"
+      >
+        {!submitted ? (
+          <>
+            <div className="mb-6">
+              <label
+                htmlFor="name"
+                className="block mb-2 text-gray-300 text-sm uppercase tracking-wider"
+              >
+                Your Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                placeholder="e.g., A well-wisher"
+                className="w-full bg-transparent border-b border-gray-500 focus:border-pink-400 outline-none py-2 text-white placeholder-gray-400 transition-all duration-300"
+              />
+            </div>
 
-        .animate-bounceHeart {
-          animation-name: bounceHeart;
-          animation-duration: 2s;
-          animation-iteration-count: infinite;
-          animation-timing-function: ease-in-out;
-        }
-      `}</style>
+            <div className="mb-10">
+              <label
+                htmlFor="message"
+                className="block mb-2 text-gray-300 text-sm uppercase tracking-wider"
+              >
+                Your Message
+              </label>
+              <textarea
+                name="message"
+                value={form.message}
+                onChange={handleChange}
+                rows="5"
+                placeholder="Write something heartfelt..."
+                className="w-full bg-transparent border-b border-gray-500 focus:border-pink-400 outline-none py-2 text-white placeholder-gray-400 transition-all duration-300"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full py-3 rounded-xl bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold tracking-wider hover:scale-[1.02] hover:shadow-lg transition-all duration-300 flex justify-center gap-2"
+            >
+              Send Wish <SendHorizontal />
+            </button>
+          </>
+        ) : (
+          <div className="text-center py-12 flex flex-col items-center gap-4">
+  <CheckCircle className="w-12 h-12 text-green-300 animate-bounce" />
+  <p
+    className="text-2xl text-green-300 font-light"
+    style={{ fontFamily: "'Playfair Display', serif" }}
+  >
+    Your wish has been sent successfully!
+  </p>
+</div>
+        )}
+      </form>
+
+      {/* Slim Footer */}
+      <footer className="relative z-10 mt-16 text-center text-sm text-gray-400">
+        © {new Date().getFullYear()}{" "}
+        <a
+          href="https://www.instagram.com/ajmale._"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-pink-400 hover:text-pink-500 transition-colors duration-300"
+        >
+          @ajmal k saleem
+        </a>
+      </footer>
+
+      {/* Bottom gradient fade */}
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-gray-900 to-transparent"></div>
     </section>
   );
 }
+
