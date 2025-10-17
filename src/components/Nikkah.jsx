@@ -1,6 +1,6 @@
 import React from "react";
 import hallPng from "../assets/marriageHall.png";
-import sunPng from "../assets/sun.png";
+import sunPng from "../assets/sun.webp";
 import cloudPng from "../assets/cloud.png";
 import moonPng from "../assets/moon.png";
 import receptionHallPng from "../assets/receptionHall.png";

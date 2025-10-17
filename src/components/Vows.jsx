@@ -62,19 +62,24 @@ export default function Wishes() {
       </div>
 
       {/* Heading */}
-      <h2
-        className="relative z-10 text-4xl md:text-5xl font-light mb-3 tracking-wide text-center"
-      >
-        Leave Your Wishes
-      </h2>
+  <h2
+  className="relative z-10 text-4xl md:text-7xl font-[400] mb-3 text-center text-pink-300 font-[Great_Vibes]"
+>
+  Leave Your Wishes
+</h2>
+
 
       {/* Subtext */}
-      <p
-        className="relative z-10 text-gray-300 text-center mb-12 text-base italic"
-        style={{ fontFamily: "'DM Sans', sans-serif" }}
-      >
-        “May every word shared today shine with warmth and grace”
-      </p>
+     {/* Subtext with elegant quotes */}
+<p
+  className="relative z-10 text-gray-300 text-center mb-4 text-lg md:text-xl italic leading-relaxed max-w-2xl mx-auto font-[DM_Sans]"
+>
+  <span className="text-5xl text-pink-400 align-top">“</span>
+  <span className="px-2 text-gray-200">
+    May every word shared today shine with warmth and grace
+  </span>
+  <span className="text-5xl text-pink-400 align-bottom">”</span>
+</p>
 
       {/* Form */}
       <form
@@ -138,9 +143,9 @@ export default function Wishes() {
           </>
         ) : (
           <div className="text-center py-12 flex flex-col items-center gap-4">
-  <CheckCircle className="w-12 h-12 text-pink-400 animate-bounce" />
+  <CheckCircle className="w-12 h-12 text-green-300 animate-bounce" />
   <p
-    className="text-xl text-pink-400 font-light"
+    className="text-xl text-green-300 font-light"
   >
     Your wish has been sent successfully!
   </p>
