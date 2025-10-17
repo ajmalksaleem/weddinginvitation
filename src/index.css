@@ -108,10 +108,7 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-}
+
 
 @keyframes glow {
   0%, 100% { opacity: 0.4; }
@@ -139,3 +136,7 @@
 .animate-twinkle {
   animation: twinkle 2s infinite ease-in-out;
 }
+
+
+
+/*  */

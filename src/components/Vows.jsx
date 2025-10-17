@@ -53,7 +53,7 @@ export default function Wishes() {
 
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-950 via-gray-950 to-black text-white px-6 py-20 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-950 via-gray-950 to-black text-white px-6 pt-10 pb-20 overflow-hidden">
 
       {/* Subtle background glow */}
       <div className="absolute inset-0">
@@ -64,7 +64,6 @@ export default function Wishes() {
       {/* Heading */}
       <h2
         className="relative z-10 text-4xl md:text-5xl font-light mb-3 tracking-wide text-center"
-        style={{ fontFamily: "'Kaushan Script', cursive" }}
       >
         Leave Your Wishes
       </h2>
@@ -124,7 +123,7 @@ export default function Wishes() {
   className={`w-full py-3 rounded-xl text-white font-semibold tracking-wider transition-all duration-300 flex justify-center gap-2
     ${loading
       ? "bg-gray-400 cursor-not-allowed"
-      : "bg-gradient-to-r from-purple-500 to-blue-500 hover:scale-[1.02] hover:shadow-lg"}
+      : "bg-gradient-to-r from-pink-400 to-pink-500 hover:scale-[1.02] hover:shadow-lg"}
   `}
 >
   {loading ? (
@@ -139,10 +138,9 @@ export default function Wishes() {
           </>
         ) : (
           <div className="text-center py-12 flex flex-col items-center gap-4">
-  <CheckCircle className="w-12 h-12 text-green-300 animate-bounce" />
+  <CheckCircle className="w-12 h-12 text-pink-400 animate-bounce" />
   <p
-    className="text-2xl text-green-300 font-light"
-    style={{ fontFamily: "'Playfair Display', serif" }}
+    className="text-xl text-pink-400 font-light"
   >
     Your wish has been sent successfully!
   </p>
@@ -159,7 +157,7 @@ export default function Wishes() {
           rel="noopener noreferrer"
           className="text-pink-400 hover:text-pink-500 transition-colors duration-300"
         >
-          @ajmal k saleem
+          @ajmalksaleem@gmail.com
         </a>
       </footer>
 

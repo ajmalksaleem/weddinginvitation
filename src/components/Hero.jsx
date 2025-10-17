@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import bg from "../assets/herobg.png";
+import bg from "../assets/herobg.webp";
 import redHeart from "../assets/redhart.png";
 
 export default function Hero() {
@@ -112,25 +112,3 @@ export default function Hero() {
 }
 
 
-//  $("#submit-form").submit((e)=>{
-//             e.preventDefault()
-//             const submitButton = $("#submitbtn");
-//             submitButton.prop("disabled", true).text("Loading...");
-//             $.ajax({
-//                 url:"https://script.google.com/macros/s/AKfycbwOb4u5h_UzvkSOZumeI2TzmnPmjZNFBq1W-VYjDMFHnhJDB7IZI0Sd7sdA3coL6xIn0g/exec",
-//                 data:$("#submit-form").serialize(),
-//                 method:"post",
-//                 success:function (response){
-//                     alert("Form submitted successfully")
-//                     window.location.reload()
-//                     //window.location.href="https://google.com"
-//                 },
-//                 error:function (err){
-//                     alert("Something Error")
-    
-//                 },
-//                 complete: function() {
-//             submitButton.prop("disabled", false).text("Send Message"); // Re-enable and reset text after submission
-//         }
-//             })
-//         })

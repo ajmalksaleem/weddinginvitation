@@ -1,8 +1,8 @@
 import React from "react";
-import groomImg from "../assets/groom.png";
+import groomImg from "../assets/groom.webp";
 import groomBg from "../assets/groombg.jpg";
-import brideIcon from "../assets/bride.png";
-import bush from "../assets/tree.png";
+import brideIcon from "../assets/bride.webp";
+import bush from "../assets/tree.webp";
 import leaf from "../assets/leaf.png";
 import Bee from "./Bee"
 
