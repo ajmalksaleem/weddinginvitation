@@ -72,14 +72,16 @@ export default function Wishes() {
       {/* Subtext */}
      {/* Subtext with elegant quotes */}
 <p
-  className="relative z-10 text-gray-300 text-center mb-4 text-lg md:text-xl italic leading-relaxed max-w-2xl mx-auto font-[DM_Sans]"
+  className="relative z-10 text-center mb-4 text-base md:text-xl italic leading-normal max-w-xs md:max-w-2xl mx-auto font-[DM_Sans] text-gray-200"
+  style={{ lineHeight: "1.6" }}
 >
-  <span className="text-5xl text-pink-400 align-top">“</span>
-  <span className="px-2 text-gray-200">
+  <span className="text-pink-400 text-3xl align-[0.2em]">“</span>
+  <span className="px-1">
     May every word shared today shine with warmth and grace
   </span>
-  <span className="text-5xl text-pink-400 align-bottom">”</span>
+  <span className="text-pink-400 text-3xl align-[-0.2em]">”</span>
 </p>
+
 
       {/* Form */}
       <form
